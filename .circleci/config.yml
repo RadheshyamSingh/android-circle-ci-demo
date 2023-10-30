@@ -8,7 +8,7 @@ jobs:
   lint:
     executor:
       name: android/android-docker
-      resource-class: xlarge
+      resource-class: small
       tag: 2023.09.1
     steps:
       - checkout
@@ -19,7 +19,7 @@ jobs:
   unit_test:
     executor:
       name: android/android-docker
-      resource-class: xlarge
+      resource-class: small
       tag: 2023.09.1
     steps:
       - checkout
@@ -32,7 +32,7 @@ jobs:
   integration_test:
     executor:
       name: android/android-machine
-      resource-class: xlarge
+      resource-class: small
       tag: 2023.09.1
     steps:
       - checkout
@@ -43,7 +43,7 @@ jobs:
   build_for_integration_test:
     executor:
       name: android/android-machine
-      resource-class: xlarge
+      resource-class: small
       tag: 2023.09.1
     steps:
       - checkout
@@ -58,7 +58,7 @@ jobs:
     parallelism: 6
     executor:
       name: android/android-machine
-      resource-class: xlarge
+      resource-class: small
       tag: 2023.09.1
     steps:
       - checkout
@@ -89,7 +89,7 @@ jobs:
   beta:
     executor:
       name: android/android-docker
-      resource-class: xlarge
+      resource-class: small
       tag: 2023.09.1
     steps:
       - checkout
